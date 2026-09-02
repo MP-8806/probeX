@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 
-app = FastAPI(title="MiniScan API")
+app = FastAPI(title="probeX API")
 
 
 @app.get("/health")
