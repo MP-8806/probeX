@@ -1,0 +1,18 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: probex-postgres
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_DB: probex
+      POSTGRES_USER: probex
+      POSTGRES_PASSWORD: probex_dev_password
+
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
